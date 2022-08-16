@@ -1,9 +1,10 @@
 import './App.scss'
+import { Header } from './layout'
 
 function App() {
   return (
     <div className="App">
-    Hello World
+    <Header/>
   </div>
   )
 }

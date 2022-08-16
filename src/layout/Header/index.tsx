@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Header() {
+const index = () => {
   return (
-    <div>Header</div>
+    <div>index</div>
   )
 }
 
-export default Header
+export default index
