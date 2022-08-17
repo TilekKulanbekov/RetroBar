@@ -11,6 +11,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <App />
+    
 )
 
 // ReactDOM.createRoot(document.getElementById('root') as ).render(

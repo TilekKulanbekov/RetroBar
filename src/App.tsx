@@ -1,10 +1,11 @@
 import './App.scss'
+import { Footer } from './layout'
 
 function App() {
   return (
     <div className="App">
-    Hello World
-  </div>
+      <Footer />
+    </div>
   )
 }
 
