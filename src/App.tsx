@@ -1,12 +1,13 @@
-import './App.scss'
-import { Header } from './layout'
+import './App.scss';
+import './styles/index.scss';
+import { Header } from './layout';
 
 function App() {
   return (
-    <div className="App">
-    <Header/>
-  </div>
-  )
+    <div className='App'>
+      <Header />
+    </div>
+  );
 }
 
-export default App
+export default App;
