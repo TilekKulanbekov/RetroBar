@@ -1,15 +1,17 @@
 import React from 'react'
 import '../../styles/Footer.scss'
-import logo from '../../assets/retro-bar-logo.png'
-import {Box} from '@mui/material'
+import { InstagramIcon, VectorSearch, TelegramIcon, YoutubeIcon, LogoRetroIcon } from '../../assets/Icons'
+import { Box } from '@mui/material'
+
 function Footer() {
+  
   return (
     <div className='footerContainer'>
       <div className='footerContainerInner'>
-        <Box  style={{display:'flex', flexDirection:'column' ,width: '25%'}}>
-          <img style={{objectFit:'cover', width:'10rem'}} src={logo} alt="logo" />
-          <div className='footerPoliticConfidentual'>
-            <p>Политика конфиденциальности </p>
+        <Box className='footerPoliticConfidentual'  style={{display:'flex', flexDirection:'column' }}>
+          <img src={LogoRetroIcon} alt="logo" />
+          <div className='footerPoliticConfidentualInner'>
+            <p className='politConf'>Политика конфиденциальности </p>
             <span>
               <p>
                 Copyright © 2021
@@ -20,7 +22,7 @@ function Footer() {
             </span>
           </div>
         </Box>
-        <Box className='footerNavigation' style={{display:'flex' ,width: '25%', height:'100%'}}>
+        <Box className='footerNavigation' style={{display:'flex' , height:'100%'}}>
           <ul>
             <li>
               Фото
@@ -49,6 +51,34 @@ function Footer() {
               Контакты
             </li>
           </ul>
+        </Box>
+        <Box className='footerSocial' style={{display:'flex' , height:'100%'}}>
+            <div className='searchBlock'>
+              <div className='searchCont'>
+                <input type='text' placeholder='Геолокация|' className='footerSearchInput' />
+                <button className='footerSearchBtn'><img src={VectorSearch} alt='search' /></button>
+              </div>
+            </div>
+            <div className='footerInfo'>
+              <p>Мы в социальных сетях:</p>
+              <div className='footerInfoIconsBlock'>
+                <img src={TelegramIcon} alt="telegram" />
+                <img src={InstagramIcon} alt="Instagram" />
+                <img src={YoutubeIcon} alt="Youtube" />
+              </div>
+            </div>
+            
+            <div className='footerPoliticConfidentualInnerSecond'>
+              <p className='politConf'>Политика конфиденциальности </p>
+              <span>
+                <p>
+                  Copyright © 2021
+                </p>
+                <p>
+                  Digital-агентство «Active Trust»
+                </p>
+              </span>
+            </div>
         </Box>
       </div>
     </div>

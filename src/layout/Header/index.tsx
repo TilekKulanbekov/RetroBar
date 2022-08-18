@@ -1,9 +1,30 @@
-import React from 'react'
+import { AppBar, Container, Toolbar } from '@mui/material';
+import { Box } from '@mui/system';
+import { LogoRetro } from '../../assets/Icons';
 
-function Header() {
+export const Header = () => {
+  const pages = ['Products', 'Pricing', 'Blog'];
+
   return (
-    <div>Header</div>
-  )
-}
+    <AppBar position='static'>
+      <Container maxWidth='xl'>
+        <Toolbar disableGutters>
+          <LogoRetro />
+          <Box
+            sx={{
+              width: 'auto',
 
-export default Header
+              backgroundColor: 'primary.dark',
+              '&:hover': {
+                backgroundColor: 'primary.main',
+                opacity: [0.9, 0.8, 0.7],
+              },
+            }}
+          />
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+};
+
+export default Header;
