@@ -1,10 +1,167 @@
-.appBar {
-  background-color: black !important;
-  padding-left: 27px;
-}
-.MuiToolbar-regular {
+.header {
+  max-width: 1032px;
+  background-color: #000;
   display: flex;
-  justify-content: end;
-  margin-right: 42px;
-  column-gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 27px;
+  margin: 0 auto;
+  &__row {
+    display: flex;
+    align-items: center;
+    &__navigation {
+      display: flex;
+      column-gap: 30px;
+      &_Nav {
+        color: #ffff;
+        font-weight: 400;
+        font-size: 16px;
+        background-color: #000;
+        padding: 10px;
+        &:hover {
+          border-left: 1px solid #ebebeb;
+          border-right: 1px solid #ebebeb;
+        }
+      }
+    }
+    &__button {
+      width: 33px;
+      height: 33px;
+      background: #ff6d00;
+      border-radius: 8px;
+      margin-left: 42px;
+    }
+  }
+}
+.line {
+  opacity: 0.6;
+  border-bottom: 1px solid #ebebeb;
+  max-width: 1050px;
+  filter: blur(1px);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+label .hamburger {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  width: 30px;
+  height: 2px;
+  background: #ffffff;
+  display: none;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+label .hamburger:before {
+  top: -10px;
+}
+
+label .hamburger:after {
+  bottom: -10px;
+}
+
+label input {
+  display: none;
+}
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw rgb(5, 5, 5), 0 0 0 100vh rgb(0, 0, 0);
+  opacity: 0.3;
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+label input:checked + .menu + ul {
+  opacity: 1;
+}
+
+label div {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.25s 0s ease-in-out;
+  transition: 0.25s 0s ease-in-out;
+}
+
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.25s 0s ease-in-out;
+  transition: 0.25s 0s ease-in-out;
+}
+label ul li {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 27px;
+  color: #ffffff;
+}
+label ul p {
+  font-size: 25px;
+  line-height: 27px;
+  color: #ffffff;
+}
+
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 30px 40px;
+    &__row {
+      &__navigation {
+        display: none;
+      }
+      &__button {
+        display: none;
+      }
+    }
+  }
+  .line {
+    max-width: 980px;
+  }
+  label .hamburger {
+    display: block;
+  }
 }
