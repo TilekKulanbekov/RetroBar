@@ -68,18 +68,18 @@ function Footer() {
               </div>
             </div>
             
-            <div className='footerPoliticConfidentualInnerSecond'>
-              <p className='politConf'>Политика конфиденциальности </p>
-              <span>
-                <p>
-                  Copyright © 2021
-                </p>
-                <p>
-                  Digital-агентство «Active Trust»
-                </p>
-              </span>
-            </div>
         </Box>
+        <div className='footerPoliticConfidentualInnerSecond'>
+          <p className='politConf'>Политика конфиденциальности </p>
+          <span>
+            <p>
+              Copyright © 2021
+            </p>
+            <p>
+              Digital-агентство «Active Trust»
+            </p>
+          </span>
+        </div>
       </div>
     </div>
   )
